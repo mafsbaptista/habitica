@@ -1,4 +1,7 @@
 import mongoose from 'mongoose';
+import rulekeeper from '../../../../../rulekeeper/prototype/rulekeeper/RuleKeeper';
+
+rulekeeper.addMongooseMiddleware(mongoose);
 
 import logger from '../../libs/logger';
 import schema from './schema'; // eslint-disable-line import/no-cycle

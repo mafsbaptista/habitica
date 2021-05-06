@@ -2,6 +2,7 @@ import nconf from 'nconf';
 import express from 'express';
 import http from 'http';
 import logger from './libs/logger';
+import rulekeeper from '../../../rulekeeper/prototype/rulekeeper/RuleKeeper';
 
 // Setup translations
 // Must come before attach middlewares so Mongoose validations can use translations
@@ -24,6 +25,8 @@ const app = express();
 app.set('port', nconf.get('PORT'));
 
 attachMiddlewares(app, server);
+
+rulekeeper.initRuleKeeper();
 
 server.on('request', app);
 server.listen(app.get('port'), () => {

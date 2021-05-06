@@ -9,6 +9,7 @@ import {
 import gcpStackdriverTracer from '../libs/gcpTraceAgent';
 import common from '../../common';
 import { getLanguageFromUser } from '../libs/language';
+import rulekeeper from '../../../../rulekeeper/prototype/rulekeeper/RuleKeeper';
 
 const COMMUNITY_MANAGER_EMAIL = nconf.get('EMAILS_COMMUNITY_MANAGER_EMAIL');
 const USER_FIELDS_ALWAYS_LOADED = ['_id', 'notifications', 'preferences', 'auth', 'flags'];
@@ -88,6 +89,7 @@ export function authWithHeaders (options = {}) {
 
         res.locals.user = user;
         req.session.userId = user._id;
+        res.locals.rulekeeper = { username: user.auth.local.username };
         stackdriverTraceUserId(user._id);
         user.auth.timestamps.updated = new Date();
         return next();

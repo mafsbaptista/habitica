@@ -30,6 +30,7 @@ import responseHandler from './response';
 import {
   attachTranslateFunction,
 } from './language';
+import rulekeeper from '../../../../rulekeeper/prototype/rulekeeper/RuleKeeper';
 
 const IS_PROD = nconf.get('IS_PROD');
 const DISABLE_LOGGING = nconf.get('DISABLE_REQUEST_LOGGING') === 'true';
@@ -43,7 +44,7 @@ export default function attachMiddlewares (app, server) {
   setupExpress(app);
 
   app.use(domainMiddleware(server, mongoose));
-
+  rulekeeper.addContextMiddleware(app);
   if (!IS_PROD && !DISABLE_LOGGING) app.use(morgan('dev'));
 
   // See https://helmetjs.github.io/ for the list of headers enabled by default

@@ -16,7 +16,8 @@ export async function get (req, res, { isV3 = false }) {
   if (isV3) {
     userToJSON = await user.toJSONWithInbox();
   } else {
-    userToJSON = user.toJSON();
+    const fetchUser = await User.findOne({ "auth.local.username": user.auth.local.username });
+    userToJSON = fetchUser.toJSON();
   }
 
   // Remove apiToken from response TODO make it private at the user level? returned in signup/login

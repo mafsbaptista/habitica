@@ -7,8 +7,11 @@ import {
   getDevelopmentConnectionUrl,
   getDefaultConnectionOptions,
 } from '../website/server/libs/mongodb';
+import rulekeeper from '../../rulekeeper/prototype/rulekeeper/RuleKeeper';
 
+rulekeeper.addMongooseMiddleware(mongoose);
 // Add additional properties to the repl's context
+
 const improveRepl = context => {
   // Let "exit" and "quit" terminate the console
   ['exit', 'quit'].forEach(term => {

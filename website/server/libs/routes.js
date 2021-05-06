@@ -12,6 +12,8 @@ import {
 const _wrapAsyncFn = fn => (...args) => fn(...args).catch(args[2]);
 const noop = (req, res, next) => next();
 
+import rulekeeper from '../../../../rulekeeper/prototype/rulekeeper/RuleKeeper';
+
 export function readController (router, controller, overrides = []) {
   _.each(controller, action => {
     let {
@@ -50,6 +52,9 @@ export function readController (router, controller, overrides = []) {
         middlewares.unshift(getUserLanguage);
       }
     }
+
+    middlewares.push(rulekeeper.contextMiddlewareHandler);
+    middlewares.push(rulekeeper.accessControlMiddlewareHandler);
 
     const fn = handler ? _wrapAsyncFn(handler) : noop;
 
