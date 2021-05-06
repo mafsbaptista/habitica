@@ -9,14 +9,14 @@ spec:
 #    - image: mongo:latest
 #      name: mongo
 #      ports:
-#        - containerPort: 27017
+#        - containerPort: 27018
 #          name: mongo
     - image: ksonney/habitrpg:latest
       name: habitica
       env:
         - name: NODE_DB_URI
           value: mongodb://mongosvc/habitrpg
-      ports: 
+      ports:
         - containerPort: 3000
           hostPort: 3000
           name: habitica

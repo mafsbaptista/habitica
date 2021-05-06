@@ -37,7 +37,7 @@ var thingsOfInterest = {
 var mongo = require('mongoskin');
 var _ = require('lodash');
 
-var dbUsers = mongo.db('localhost:27017/habitrpg?auto_reconnect').collection('users');
+var dbUsers = mongo.db('localhost:27018/habitrpg?auto_reconnect').collection('users');
 
 var thingsFound = {};  // each key is one "thing" from thingsOfInterest,
         // and the value for that key is the number of users who own it
@@ -151,7 +151,7 @@ function exiting(code, msg) {
 
 
 /*  SAMPLE OUTPUT (STDOUT and STDERR):
-$ node database_reports/count_users_who_own_specified_gear.js 
+$ node database_reports/count_users_who_own_specified_gear.js
 
 Finding data...
 Alys processed

@@ -25,7 +25,7 @@ let authorUuid = 'd904bd62-da08-416b-a816-ba797c9ee265'; // ... own data is done
 // be checked for compatibility against the v4 changelog and changed if necessary.
 // https://github.com/lodash/lodash/wiki/Changelog#v400
 
-let dbserver = 'localhost:27017'; // FOR TEST DATABASE
+let dbserver = 'localhost:27018'; // FOR TEST DATABASE
 // var dbserver = 'username:password@ds031379-a0.mongolab.com:31379' // FOR PRODUCTION DATABASE
 let dbname = 'habitrpg';
 

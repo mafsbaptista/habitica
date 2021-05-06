@@ -7,7 +7,7 @@ let authorUuid = 'd904bd62-da08-416b-a816-ba797c9ee265'; // ... own data is done
  * Convert false to null for mounts that used to be owned.
  */
 
-let dbserver = 'localhost:27017'; // CHANGE THIS FOR PRODUCTION DATABASE
+let dbserver = 'localhost:27018'; // CHANGE THIS FOR PRODUCTION DATABASE
 
 // IMPORTANT NOTE: this migration was written when we were using version 3 of lodash.
 // We've now upgraded to lodash v4 but the code used in this migration has not been

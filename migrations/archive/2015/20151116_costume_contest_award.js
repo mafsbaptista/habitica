@@ -6,7 +6,7 @@ let authorUuid = '7f14ed62-5408-4e1b-be83-ada62d504931'; // ... own data is done
  * Award Costume Contest achievement to 2015 winners
  */
 
-let dbserver = 'localhost:27017'; // FOR TEST DATABASE
+let dbserver = 'localhost:27018'; // FOR TEST DATABASE
 // var dbserver = 'username:password@ds031379-a0.mongolab.com:31379'; // FOR PRODUCTION DATABASE
 let dbname = 'habitrpg';
 

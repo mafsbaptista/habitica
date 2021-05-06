@@ -40,7 +40,7 @@ services:
     networks:
       - habitica
     ports:
-      - "27017:27017"
+      - "27018:27018"
 networks:
   habitica:
     driver: bridge

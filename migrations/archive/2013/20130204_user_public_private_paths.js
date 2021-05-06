@@ -1,5 +1,5 @@
-// %mongo server:27017/dbname underscore.js my_commands.js
-// %mongo server:27017/dbname underscore.js --shell
+// %mongo server:27018/dbname underscore.js my_commands.js
+// %mongo server:27018/dbname underscore.js --shell
 
 // db.users.find({'auth.facebook.email': 'tylerrenelle@gmail.com'}).forEach(function(user){
 db.users.find().forEach(function (user) {

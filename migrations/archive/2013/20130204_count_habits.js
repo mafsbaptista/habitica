@@ -1,5 +1,5 @@
-// %mongo server:27017/dbname underscore.js my_commands.js
-// %mongo server:27017/dbname underscore.js --shell
+// %mongo server:27018/dbname underscore.js my_commands.js
+// %mongo server:27018/dbname underscore.js --shell
 
 // IMPORTANT NOTE: this migration was written when we were using version 3 of lodash.
 // We've now upgraded to lodash v4 but the code used in this migration has not been

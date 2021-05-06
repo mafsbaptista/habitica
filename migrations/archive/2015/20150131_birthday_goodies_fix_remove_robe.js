@@ -6,7 +6,7 @@ let authorUuid = 'd904bd62-da08-416b-a816-ba797c9ee265'; // ... own data is done
  * remove new birthday robes and second achievement from people who shouldn't have them
  */
 
-let dbserver = 'localhost:27017'; // CHANGE THIS FOR PRODUCTION DATABASE
+let dbserver = 'localhost:27018'; // CHANGE THIS FOR PRODUCTION DATABASE
 
 // IMPORTANT NOTE: this migration was written when we were using version 3 of lodash.
 // We've now upgraded to lodash v4 but the code used in this migration has not been

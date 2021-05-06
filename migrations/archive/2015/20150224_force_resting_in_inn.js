@@ -12,7 +12,7 @@ let authorUuid = 'd904bd62-da08-416b-a816-ba797c9ee265'; // ... own data is done
 // be checked for compatibility against the v4 changelog and changed if necessary.
 // https://github.com/lodash/lodash/wiki/Changelog#v400
 
-let dbserver = 'localhost:27017'; // CHANGE THIS FOR PRODUCTION DATABASE
+let dbserver = 'localhost:27018'; // CHANGE THIS FOR PRODUCTION DATABASE
 
 let mongo = require('mongoskin');
 let _ = require('lodash');

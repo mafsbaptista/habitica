@@ -36,7 +36,7 @@ let mongo = require('mongoskin');
 let _ = require('lodash');
 
 
-let dbUsers = mongo.db('localhost:27017/habitrpg?auto_reconnect').collection('users');
+let dbUsers = mongo.db('localhost:27018/habitrpg?auto_reconnect').collection('users');
 
 
 let query = {

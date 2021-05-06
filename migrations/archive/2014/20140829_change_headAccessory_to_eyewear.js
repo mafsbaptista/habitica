@@ -15,7 +15,7 @@ let authorUuid = 'd904bd62-da08-416b-a816-ba797c9ee265'; // ... own data is done
  */
 let mongo = require('mongoskin');
 let _ = require('lodash');
-let liveUsers = mongo.db('localhost:27017/habitrpg2?auto_reconnect').collection('users');
+let liveUsers = mongo.db('localhost:27018/habitrpg2?auto_reconnect').collection('users');
 
 let fields = {migration: 1,
               'items.gear.costume.headAccessory': 1,

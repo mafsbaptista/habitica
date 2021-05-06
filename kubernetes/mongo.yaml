@@ -2,18 +2,18 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: mongodb
-  labels: 
+  labels:
     name: mongodb
-spec: 
-  containers: 
+spec:
+  containers:
     - resources:
         limits :
           cpu: 0.5
       image: mongo
       name: mongodb
-      ports: 
-        - containerPort: 27017
-          hostPort: 27017
+      ports:
+        - containerPort: 27018
+          hostPort: 27018
           name: mongo
       volumeMounts:
 #         # name must match the volume name below
