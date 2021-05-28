@@ -6,6 +6,9 @@ import shared from '../../common';
 import baseModel from '../libs/baseModel';
 import { preenHistory } from '../libs/preening';
 import { SHARED_COMPLETION } from '../libs/groupTasks'; // eslint-disable-line import/no-cycle
+import rulekeeper from '../../../../rulekeeper/prototype/rulekeeper/RuleKeeper';
+
+rulekeeper.addMongooseMiddleware(mongoose);
 
 const { Schema } = mongoose;
 
