@@ -155,7 +155,7 @@ async function registerLocal (req, res, { isV3 = false }) {
       verifiedUsername: true,
     },
   };
-
+/*
   if (existingUser) {
     const hasSocialAuth = common.constants.SUPPORTED_SOCIAL_NETWORKS.find(network => {
       if (existingUser.auth.hasOwnProperty(network.key)) { // eslint-disable-line no-prototype-builtins, max-len
@@ -166,10 +166,10 @@ async function registerLocal (req, res, { isV3 = false }) {
     if (!hasSocialAuth) throw new NotAuthorized(res.t('onlySocialAttachLocal'));
     existingUser.auth.local = newUser.auth.local;
     newUser = existingUser;
-  } else {
+  } else {*/
     newUser = new User(newUser);
     newUser.registeredThrough = req.headers['x-client']; // Not saved, used to create the correct tasks based on the device used
-  }
+  //}
 
   // we check for partyInvite for backward compatibility
   if (req.query.groupInvite || req.query.partyInvite) {

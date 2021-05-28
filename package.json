@@ -105,7 +105,7 @@
     "client:unit": "cd website/client && npm run test:unit",
     "start": "DEBUG='RULEKEEPER'* DEBUG_COLORS=false gulp nodemon",
     "debug": "gulp nodemon --inspect",
-    "mongo:dev": "run-rs -v 4.2.8 -l ubuntu1804 --keep --dbpath mongodb-data --number 1 --quiet",
+    "mongo:dev": "run-rs -v 4.2.8 -l ubuntu1804 --keep --dbpath mongodb-data --number 1 --quiet -p 27018",
     "postinstall": "gulp build && cd website/client && npm install",
     "apidoc": "gulp apidoc"
   },
