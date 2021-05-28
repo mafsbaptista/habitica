@@ -1,1 +1,0 @@
-SVGs used inside CSS / SCSS with `url(...)` must go in the `for-css` folder.
